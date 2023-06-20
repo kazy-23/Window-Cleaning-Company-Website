@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>The Window Cleaning Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#welcome">Welcome</a>
+        <a href="#reviews">Testimonials / Reviews</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contacts">Contacts</a>
+    </nav>
+    <main>
+        <section id="welcome">
+            <h1>Welcome to our website!</h1>
+            <p class="desc">We are The Window Cleaning Company and we provide window cleaning services to businesses and households.</p>
+        </section>
+        <section id="reviews">
+            <h2>Testimonials / Reviews</h2>
+            <h3>We have worked with</h3>
+            <div class="testimonials">
+                    <img src="https://cdn.vox-cdn.com/thumbor/xkl-sBMEsQM4OyY6CGfNBUdQCjg=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13065787/EC_Collaboration_PChang_5385.jpg">
+                    <p>Twitter HQ</p>
+
+                    <img src="https://media-cdn.sygictraveldata.com/media/800x600/612664395a40232133447d33247d3835383637383136">
+                    <p>Google HQ</p>
+            </div>
+            <h3>Customer reviews</h3>
+            <div id="review-customers" class="reviews">
+                <div>
+                    <h4>John</h4>
+                    <p>"Amazing service!"</p>
+                </div>
+                <div>
+                    <h4>Mary</h4>
+                    <p>"Windows are so clean that I once just ran into one, thinking it is an exit :)"</p>
+                </div>
+                <div>
+                    <h4>Richard</h4>
+                    <p>"Good price and good quality!"</p>
+                </div>
+            </div>
+            <div style="text-align: center"><button id="review-button"><h4>See reviews</h4></button></div>
+        </section>
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <p>Households</p>
+            <h3><b>5-10$ per window</b></h3>
+            <p>Businesses</p>
+            <h3><b>Contact us to make a deal</b></h3>
+        </section>
+        <section id="contacts">
+            <h2>Contacts</h2>
+            <div><b>Email: </b>thewindowcleaningcompany@gmail.com</div>
+            <div><b>Phone: </b>+123 45678910</div>
+        </section>
+    </main>
+
+    <script>
+        const content = document.getElementById("review-customers");
+        const button = document.getElementById("review-button");
+        let isOpen = false;
+
+        content.style.display = 'none';
+
+        button.onclick = (e)=>{
+            isOpen = !isOpen;
+            if(isOpen){
+                content.style.display = 'inline';
+                button.children[0].innerHTML = "Close reviews";
+            }
+            else{
+                content.style.display = 'none';
+                button.children[0].innerHTML = "See reviews";
+            }
+        };
+    </script>
+</body>
+</html>
